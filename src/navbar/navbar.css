@@ -1,0 +1,170 @@
+body
+{
+      position: relative;
+}
+.navbar
+{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+}
+ul
+{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 3rem;  
+      padding-top: 25px; 
+}
+.links
+{
+      list-style:none;
+      font-size: 20px;
+      cursor: pointer;
+}
+p
+{
+      font-size: 32px;
+}
+.hr-line
+{
+      opacity: 0;
+      width: 0px;
+      height: 1.4px;
+      border: none;
+      transition: all .3s ease;
+}
+li:hover .hori-line
+{
+      opacity: 1;
+      width: 50px;
+      background-color: black;
+}
+li:hover .darkmode-hr
+{
+      opacity: 1;
+      width: 50px;
+      background-color: white;
+}
+li:hover{
+      opacity: .8;
+}
+.darkMode-btn img
+{
+      width: 1.7rem;
+}
+.darkMode-btn
+{
+      display: flex;
+      align-items: center;
+      position: absolute;
+      top:45px;
+      right: 3rem;
+      width: 4rem;
+      height: 1.5rem;
+      border-radius: 2rem;
+      background-color: #484848;
+      cursor: pointer;
+      transition: all .5s linear;
+      border: 1px solid black;
+}
+.icon
+{
+      width: .6rem;
+      height: .5rem;
+      position: absolute;
+      left: 1px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-inline: 10px;
+      padding-block: 8px;
+      background-color: white;
+      border-radius: 3rem;
+      transition: all .4s linear;
+}
+.menuIcon-div
+{
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      width: fit-content;
+      border-radius: 3rem;
+      display: none;
+      z-index: 1;
+      display: none;
+}
+.menuIcon
+{
+      width: 3rem;
+}
+.links-container
+{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 3rem;
+}
+/* media queries */
+@media(max-width:855px){
+      ul
+      {
+            display: none;
+      }
+      .menuIcon-div
+      {
+            display: flex;
+      }
+      .display{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position:fixed;
+            top: -5rem;
+            right: -.5rem;
+            width: 100%;
+            backdrop-filter: blur(50px);
+            padding-top: 6rem;
+            height:10rem;
+            gap: 2rem;
+            transition: all 1s ease;
+            animation: menu .3s linear 0s 1 forwards ;
+            border-bottom-left-radius: 5rem;
+            border-bottom-right-radius: 5rem;
+      }
+      @keyframes menu {
+            to
+            {
+                  top: -2rem;
+            }
+      }
+      .darkMode-btn,
+      .icon
+      {
+            position: unset;
+      }
+      li
+      {
+            margin-top: 1.5rem;
+      }
+}
+@media(max-width:476px)
+{
+      .links-container
+      {
+            gap: 1rem;
+      }
+      ul
+      {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+      }
+      .display
+      {
+            gap: 0;
+            height: 6rem;
+            padding-bottom: .5rem;
+      }
+}

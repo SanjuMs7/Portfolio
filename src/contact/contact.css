@@ -1,0 +1,49 @@
+:root
+{
+      --link-div-clr:#d5d5d5;
+}
+.contact-links
+{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 3rem;
+}
+.contact-links img{
+      width:80%;
+}
+.contact-icon-div
+{
+      display: flex;
+      align-items: center;
+      justify-content:center;
+      background-color: var(--link-div-clr);
+      width: 5rem;
+      height: 5rem;
+      border-radius: 1rem;
+}
+.contact
+{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+}
+.email-icon-div
+{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      width:fit-content;
+      border-radius:1rem;
+      background-color:var(--link-div-clr);
+}
+/*media queries*/
+@media (max-width:376px)
+{
+      .contact-links
+      {
+            margin-bottom: 3rem;
+      }      
+}

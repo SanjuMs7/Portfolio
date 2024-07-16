@@ -1,0 +1,103 @@
+.project
+{
+      width: 100%;
+      display: flex;
+      justify-content:space-evenly;
+      align-items: center;
+      gap: 2rem;
+}
+.projects
+{
+      width: 30rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #555555;
+      padding: 2rem;
+      border-radius:2rem;
+}
+.projects img{
+      width:100%;
+      border-radius:1rem;
+}
+
+.project-description
+{
+      padding-block: 1rem;
+      font-size: 12px;
+}
+.project-btn
+{
+      width: 12rem;
+}
+.project-button-div
+{
+      display: flex;
+      gap:2rem;
+}
+/* media queries */
+@media(max-width:595px) 
+{
+      .projects
+      {
+            width: 25rem;
+      }
+      .project-btn
+      {
+            width: 10rem;
+      }
+}
+@media(max-width:532px) 
+{
+      .project-btn
+      {
+            width: 9rem;
+      }
+}
+@media(max-width:502px) 
+{
+      .project-btn
+      {
+            width: 8rem;
+      }
+}
+@media(max-width:473px) 
+{
+      .project-btn
+      {
+            width: 7rem;
+      }
+}
+@media (max-width:426px)
+{
+      .project-button-div
+      {
+            display: flex;
+            flex-direction: column;
+            gap:.5rem;
+      }
+      .project-btn
+      {
+            width: 14rem;
+            height: 3rem;
+      }
+}
+@media (max-width:376px)
+{
+      .project-btn
+      {
+            width: 17rem;
+      }      
+}
+@media(max-width:321px)
+{
+      .projects
+      {
+            width: 15rem;
+      }
+      .project
+      {
+            flex-direction: column;
+      }
+}
