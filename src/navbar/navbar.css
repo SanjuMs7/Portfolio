@@ -65,15 +65,13 @@ li:hover{
       border-radius: 2rem;
       background-color: #484848;
       cursor: pointer;
-      transition: all .5s linear;
-      border: 1px solid black;
 }
 .icon
 {
       width: .6rem;
-      height: .5rem;
+      height: .8rem;
       position: absolute;
-      left: 1px;
+      left: 0;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -82,7 +80,8 @@ li:hover{
       padding-block: 8px;
       background-color: white;
       border-radius: 3rem;
-      transition: all .4s linear;
+      border: 1px solid rgb(150, 150, 150);
+      transition: all .3s linear;
 }
 .menuIcon-div
 {

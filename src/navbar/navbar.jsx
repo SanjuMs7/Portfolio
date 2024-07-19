@@ -16,8 +16,8 @@ function Navbar() {
       {
         movingIcon.current.style.transform="translateX(2.1rem)";
         setLight(true);
-        sunIcon.current.style.display="none";
-        moonIcon.current.style.display="flex";
+        sunIcon.current.style.display="flex";
+        moonIcon.current.style.display="none";
         setTimeout(() => {
           document.body.style.backgroundColor="white";
           document.body.style.color="black";
@@ -27,8 +27,8 @@ function Navbar() {
       {
         movingIcon.current.style.transform="translateX(0px)";
         setLight(false);
-        sunIcon.current.style.display="flex";
-        moonIcon.current.style.display="none";
+        sunIcon.current.style.display="none";
+        moonIcon.current.style.display="flex";
         setTimeout(() => {
           document.body.style.backgroundColor="#161616";
           document.body.style.color="white";
@@ -73,8 +73,8 @@ function Navbar() {
 
                 <div className="darkMode-btn" onClick={changeMode} title='Dark Mode'>
                     <div className="icon" ref={movingIcon}>
-                      <img src={lightMode} alt="" ref={sunIcon} />
-                      <img src={darkMode} alt="" style={{width:"1rem",display:"none"}} ref={moonIcon}/>
+                      <img src={lightMode} alt="" ref={sunIcon} style={{display:"none"}}/>
+                      <img src={darkMode} alt="" style={{width:"1rem",display:"flex"}} ref={moonIcon}/>
                     </div>
                 </div>
         </ul>
