@@ -13,7 +13,6 @@ function Project() {
       const [up,setUp]=useState('');
       const [flag,setFlag]=useState(false);
       window.addEventListener('scroll',()=>{
-            console.log(Math.abs(innerHeight-scrollY));
             if(Math.abs(innerHeight-scrollY) > 810 && !flag)
             {
                   setFlag(true);
