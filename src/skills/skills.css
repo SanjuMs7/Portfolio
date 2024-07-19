@@ -30,6 +30,36 @@
 {
       font-size: 13.5px;
 }
+.leftTranslateSkills
+{
+      animation: fromLeft .6s linear 0s 1 normal forwards;
+}
+.rightTranslateSkills
+{
+      animation: fromRight .6s linear 0s 1 normal forwards;
+}
+@keyframes fromLeft{
+      from{
+            transform: translateX(-50rem);
+            opacity: 0;
+      }
+      to{
+            transform: translateX(0);
+            opacity: 1;
+            transition: all .6s linear;
+      }
+}
+@keyframes fromRight{
+      from{
+            transform: translateX(50rem);
+            opacity: 0;
+      }
+      to{
+            transform: translateX(0);
+            opacity: 1;
+            transition:all .6s linear;
+      }
+}
 .icon-div
 {
       width: 5rem;

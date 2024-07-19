@@ -60,13 +60,13 @@ function Navbar() {
                     <Link to='dashboard' offset={-200} smooth={true} duration={500}>
                         <li>Home<hr className={`hr-line ${light?"hori-line":"darkmode-hr"}`}/></li>
                     </Link>
-                    <Link to='about' smooth={true} offset={-220}>
+                    <Link to='about' smooth={true} offset={-220} duration={800}>
                         <li>About<hr className={`hr-line ${light?"hori-line":"darkmode-hr"}`}/></li>
                     </Link>
-                    <Link to='skills' smooth={true} offset={-260}>
+                    <Link to='skills' smooth={true} offset={-260} duration={1000}>
                         <li style={{letterSpacing:"1px"}}>Skills<hr className={`hr-line ${light?"hori-line":"darkmode-hr"}`}/></li>
                     </Link>
-                    <Link to='projects' smooth={true} offset={-170}>
+                    <Link to='projects' smooth={true} offset={-170} duration={1500}>
                         <li>Projects<hr className={`hr-line ${light?"hori-line":"darkmode-hr"}`}/></li>
                     </Link>
                 </div>

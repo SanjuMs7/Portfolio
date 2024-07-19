@@ -36,6 +36,21 @@
       display: flex;
       gap:2rem;
 }
+.UpTranslate
+{
+      animation: fromDown .6s linear 0s 1 normal forwards;
+}
+@keyframes fromDown {
+      from{
+            transform: translateY(60rem);
+            opacity: 0;
+      }
+      to{
+            transform: translateY(0);
+            opacity: 1;
+            transition: all .6s linear;
+      }
+}
 /* media queries */
 @media(max-width:595px) 
 {
