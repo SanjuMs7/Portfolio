@@ -4,6 +4,7 @@ import lightMode from '../assets/sun-icon.png'
 import darkMode from '../assets/moon-icon.png'
 import lineIcon from '../assets/3-lines.png'
 import { Link } from 'react-scroll'
+// import Skills from '../skills/skills'
 function Navbar() {
   const movingIcon=useRef();
   const sunIcon =useRef();
@@ -12,6 +13,7 @@ function Navbar() {
 
   const [light,setLight]=useState(false);
   const changeMode=()=>{
+      
       if(!light)
       {
         movingIcon.current.style.transform="translateX(2.1rem)";
@@ -21,6 +23,16 @@ function Navbar() {
         setTimeout(() => {
           document.body.style.backgroundColor="white";
           document.body.style.color="black";
+
+          document.querySelector('.projects').style.backgroundImage="linear-gradient(white,white)";
+          document.querySelector('.projects').style.boxShadow="0px 0px 6px 0px rgb(31, 31, 31)";
+
+          let array=document.querySelectorAll(".skills-div");
+          array.forEach((div)=>{
+            div.style.backgroundImage = "linear-gradient(white, white)";
+            div.style.color="black";
+            div.style.boxShadow="0px 0px 6px 1px rgb(31, 31, 31)";
+          });
         },200);
       }
       else
@@ -32,24 +44,41 @@ function Navbar() {
         setTimeout(() => {
           document.body.style.backgroundColor="#161616";
           document.body.style.color="white";
+
+          document.querySelector('.projects').style.backgroundImage="linear-gradient(to bottom right, #1b1b1b, #131313)";
+          document.querySelector('.projects').style.boxShadow="0px 0px 1px 1px rgb(36, 36, 36)";
+
+          let array=document.querySelectorAll(".skills-div");
+          array.forEach((div)=>{
+            div.style.backgroundImage = "linear-gradient(to bottom right, #1b1b1b, #131313)";
+            div.style.color="white";
+            div.style.boxShadow="0px 0px 10px 1px rgb(31, 31, 31)";
+          });
         },200);
       }
   }
+
   const [displayed,setMenu]=useState(false);
   const [displayMenu,setMenuClass]=useState('');
+  const menu =useRef();
+
   const showMenu=()=>{
       if(!displayed)
       {
           setMenu(true);
           setMenuClass("display");
           document.body.style.backdropFilter="blur(2rem)";
+          menu.current.style.backgroundImage="linear-gradient(rgb(255, 255, 255), rgb(195, 195, 195))";
       }
       else
       {
           setMenu(false);
           setMenuClass("");
+          menu.current.style.backgroundImage="linear-gradient(white,white)";
       }
   }
+  
+
   return (
     <>
     <div className='navbar'>
@@ -78,7 +107,7 @@ function Navbar() {
                     </div>
                 </div>
         </ul>
-        <div className='menuIcon-div' onClick={showMenu}>
+        <div className='menuIcon-div' onClick={showMenu} ref={menu}>
           <img src={lineIcon} alt="" className='menuIcon'/>
         </div>
     </div>
@@ -86,5 +115,4 @@ function Navbar() {
     </>
   )
 }
-
 export default Navbar

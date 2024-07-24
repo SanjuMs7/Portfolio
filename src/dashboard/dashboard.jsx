@@ -12,7 +12,7 @@ function Dashboard() {
             <span style={{fontSize:"30px", fontWeight:"600",color:"#666666"}}>Frontend Developer</span>
             <div className="button-div">
                   <a href="https://github.com/SanjuMs7/Portfolio" target='_blank'><button>Github Repo</button></a>
-                  <Link to='contact' smooth={true} offset={-250}><button style={{backgroundColor:"#2a2a2a",color:"white",border:"none"}}>Contact Info</button></Link>
+                  <Link to='contact' smooth={true} offset={-250} duration={1700}><button style={{backgroundColor:"#2a2a2a",color:"white",border:"none"}}>Contact Info</button></Link>
             </div>
       </div>
     </div>

@@ -1,25 +1,23 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import './skills.css'
 import backendIcon from '../assets/backend-dev.png'
 import frontEndIcon from '../assets/frontend-dev.png'
 import DSAIcon from '../assets/dsa-icon.png'
 import gitIcon from '../assets/git-icon.png'
 function Skills() {
-      const [left,setLeft]=useState('');
-      const [right,setRight]=useState('');
+      const [up,setUp] = useState('');
       const [flag,setFlag]=useState(false);
       window.addEventListener('scroll',()=>{
             if(Math.abs(innerHeight-scrollY) < 205 && Math.ceil(innerHeight-scrollY)<9 && !flag)
             {
                   setFlag(true);
-                  setLeft('leftTranslateSkills');
-                  setRight('rightTranslateSkills');
+                  setUp('up');
             }
       })
   return (
     <>
-      <div className='skills'>
-            <div className={`frontend-dev skills-div ${flag?left:""}`}>
+      <div className={`skills ${flag?up:""}`}>
+            <div className={`frontend-dev skills-div`}>
                   <div className='icon-div'><img src={frontEndIcon} alt=""/></div>
                   <span>FrontEnd Dev</span>
                   <p className='skills-info'>
@@ -27,25 +25,24 @@ function Skills() {
                   </p>
             </div>
             <div className="dsa skills-div">
-                  <div className='icon-div'><img src={DSAIcon} alt="" /></div>
+                  <div className='icon-div'><img src={DSAIcon} alt=""/></div>
                   <span>DSA</span>
                   <p className='skills-info'>
-                  Strong understanding basic DSA concepts and is eager to learn more. I love solving problems with code and enjoy diving into advanced DSA topics.My goal is to master complex algorithms and structures to create efficient software solutions.
+                        Strong understanding basic DSA concepts and is eager to learn more. I love solving problems with code and enjoy diving into advanced DSA topics.My goal is to master complex algorithms and structures to create efficient software solutions.
                   </p>
             </div>
-            <div className={`backend-dev skills-div ${flag?right:""}`}>
-                  <div className='icon-div'><img src={backendIcon} alt="" /></div>
+            <div className={`backend-dev skills-div`}>
+                  <div className='icon-div'><img src={backendIcon} alt=""/></div>
                   <span>BackEnd Dev</span>
                   <p className='skills-info'>
-                  I am passionate about building scalable server-side applications and eager to deepen my expertise in advanced backend technologies, focusing on optimizing performance and enhancing security in modern tech environments.
+                        I am passionate about building scalable server-side applications and eager to deepen my expertise in advanced backend technologies, focusing on optimizing performance and enhancing security in modern tech environments.
                   </p>
             </div>
     </div>
-    <span>
+    <span style={{opacity:".8"}}>
             I am dedicated to expanding my skills by learning other essential technologies. I strive to master these tools to enhance my productivity and contribute effectively to team projects.
     </span>
     </>
   )
 }
-
 export default Skills
