@@ -39,6 +39,15 @@
       border-radius:1rem;
       background-color:var(--link-div-clr);
 }
+.emailClass
+{
+      color: white;
+      transition: all .2s ease;
+}
+.emailClass:hover
+{
+      opacity: .8 ;
+}
 /*media queries*/
 @media (max-width:376px)
 {

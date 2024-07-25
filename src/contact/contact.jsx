@@ -9,7 +9,7 @@ function Contact() {
     <div className='contact'>
             <div style={{display:"flex",justifyContent:"center",alignItems:"center",gap:".5rem"}}>
                   <div className='email-icon-div'><img src={EmailIcon} alt="" style={{width:"2rem"}}/></div>
-                  <span>sanjumlp777@gmail.com</span>
+                  <a href="mailto:sanjumlp777@gmail.com" className='emailClass'>sanjumlp777@gmail.com</a>
             </div>
             <div className="contact-links">
                   <a href="https://www.linkedin.com/in/sanju-m-s-a8106a258" target='_blank'>

@@ -27,6 +27,8 @@ function Navbar() {
           document.querySelector('.projects').style.backgroundImage="linear-gradient(white,white)";
           document.querySelector('.projects').style.boxShadow="0px 0px 6px 0px rgb(31, 31, 31)";
 
+          document.querySelector('.emailClass').style.color="black";
+
           let array=document.querySelectorAll(".skills-div");
           array.forEach((div)=>{
             div.style.backgroundImage = "linear-gradient(white, white)";
@@ -47,6 +49,8 @@ function Navbar() {
 
           document.querySelector('.projects').style.backgroundImage="linear-gradient(to bottom right, #1b1b1b, #131313)";
           document.querySelector('.projects').style.boxShadow="0px 0px 1px 1px rgb(36, 36, 36)";
+
+          document.querySelector('.emailClass').style.color="white";
 
           let array=document.querySelectorAll(".skills-div");
           array.forEach((div)=>{

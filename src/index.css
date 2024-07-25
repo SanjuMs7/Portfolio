@@ -58,6 +58,10 @@ button:nth-child(1):hover
       background-color: rgb(67, 67, 67);
       color: white;
 }
+a
+{
+      text-decoration: none;
+}
 /*media queries*/
 @media(max-width:376px)
 {
