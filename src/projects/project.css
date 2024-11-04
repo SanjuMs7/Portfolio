@@ -110,14 +110,17 @@
             width: 17rem;
       }      
 }
-@media(max-width:321px)
+@media(max-width:325px)
 {
-      .projects
-      {
-            width: 15rem;
+      .projects{
+            width: 14rem;
+            padding: 1rem;
       }
       .project
       {
             flex-direction: column;
+      }
+      .projects a button{
+            width:13rem;
       }
 }
