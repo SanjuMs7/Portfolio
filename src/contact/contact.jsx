@@ -12,12 +12,12 @@ function Contact() {
                   <a href="mailto:sanjumlp777@gmail.com" className='emailClass'>sanjumlp777@gmail.com</a>
             </div>
             <div className="contact-links">
-                  <a href="https://www.linkedin.com/in/sanju-m-s-a8106a258" target='_blank'>
+                  <a href="https://www.linkedin.com/in/sanjums/" target='_blank'>
                         <div className="contact-icon-div">
                               <img src={linkedin} alt="" />
                         </div>
                   </a>
-                  <a href="https://instagram.com/snju_46?utm_source=qr&igshid=YzU1NGVlODEzOA%3D%3D" target='_blank'>
+                  <a href="https://instagram.com/snju_46/" target='_blank'>
                         <div className="contact-icon-div">
                               <img src={Insta} alt="" />
                         </div>
