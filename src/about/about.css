@@ -5,7 +5,11 @@
       align-items: center;
       gap: 4rem;
       padding-top: 5rem;
-      padding-inline: 3%;
+      padding-inline: 3%; 
+
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all .3s ease-in-out;
 }
 .about img{
       width: 22rem;

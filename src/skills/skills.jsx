@@ -1,22 +1,29 @@
-import React, { useEffect, useRef, useState } from 'react'
 import './skills.css'
 import backendIcon from '../assets/backend-dev.png'
 import frontEndIcon from '../assets/frontend-dev.png'
 import DSAIcon from '../assets/dsa-icon.png'
-import gitIcon from '../assets/git-icon.png'
+import React, { useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 function Skills() {
-      const [up,setUp] = useState('');
-      const [flag,setFlag]=useState(false);
-      window.addEventListener('scroll',()=>{
-            if(Math.abs(innerHeight-scrollY) < 205 && Math.ceil(innerHeight-scrollY)<9 && !flag)
-            {
-                  setFlag(true);
-                  setUp('up');
-            }
-      })
+      useEffect(() => {
+            gsap.to(".skills", {
+              scrollTrigger: {
+                trigger: ".skills", 
+                start: "top 80%", 
+                end: "top 50%", 
+                scrub: 0,
+              },
+              opacity: 1,
+              y: 0,
+              duration: 1,
+            });
+          }, []);
   return (
     <>
-      <div className={`skills ${flag?up:""}`}>
+      <div className={`skills`}>
             <div className={`frontend-dev skills-div`}>
                   <div className='icon-div'><img src={frontEndIcon} alt=""/></div>
                   <span>FrontEnd Dev</span>

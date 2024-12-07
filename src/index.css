@@ -51,6 +51,7 @@ button:nth-child(1):hover
 .projects-container
 {
       display: flex;
+      flex-direction: column;
       gap: 2rem;     
 }
 ::selection

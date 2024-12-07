@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+
 import Navbar from './navbar/navbar'
 import Dashboard from './dashboard/dashboard.jsx'
 import Title from './title/title.jsx'
@@ -8,7 +8,6 @@ import About from './about/about.jsx'
 import Skills from './skills/skills.jsx'
 import Contact from './contact/contact.jsx'
 function App() {
-  const [globalLight,setGlobalLight] = useState(false);
   return (
     <>
       <div className='container'>
@@ -20,6 +19,7 @@ function App() {
           <Skills/>
           <Title heading="Browse My Recent" subheading="Projects"/>
           <div className='projects-container'>
+              
               <Project/>
           </div>
           <Title heading="Get in Touch" subheading="Connect Me"></Title>

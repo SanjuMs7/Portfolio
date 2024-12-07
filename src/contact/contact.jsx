@@ -1,10 +1,27 @@
-import React from 'react'
 import './contact.css'
 import Insta from '../assets/instagram-icon.png'
 import linkedin from '../assets/linkedin-icon.png'
 import github from '../assets/GitHub-icon.png'
 import EmailIcon from '../assets/Gmail-icon.png'
+import React, { useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 function Contact() {
+      useEffect(() => {
+            gsap.to(".contact", {
+              scrollTrigger: {
+                trigger: ".contact", 
+                start: "top 100%", 
+                end: "top 50%", 
+                scrub: 0,
+              },
+              opacity: 1,
+              y: 0,
+              duration: .5,
+            });
+          }, []);
   return (
     <div className='contact'>
             <div style={{display:"flex",justifyContent:"center",alignItems:"center",gap:".5rem"}}>
