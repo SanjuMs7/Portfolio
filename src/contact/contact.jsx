@@ -29,17 +29,17 @@ function Contact() {
                   <a href="mailto:sanjumlp777@gmail.com" className='emailClass'>sanjumlp777@gmail.com</a>
             </div>
             <div className="contact-links">
-                  <a href="https://www.linkedin.com/in/sanjums/" target='_blank'>
+                  <a href="https://www.linkedin.com/in/sanjums/" target='_blank' className='social-media-links'>
                         <div className="contact-icon-div">
                               <img src={linkedin} alt="" />
                         </div>
                   </a>
-                  <a href="https://instagram.com/snju_46/" target='_blank'>
+                  <a href="https://instagram.com/snju_46/" target='_blank' className='social-media-links'>
                         <div className="contact-icon-div">
                               <img src={Insta} alt="" />
                         </div>
                   </a>
-                  <a href="https://github.com/SanjuMs7" target='_blank'>
+                  <a href="https://github.com/SanjuMs7" target='_blank' className='social-media-links'>
                         <div className="contact-icon-div">
                               <img src={github} alt="" style={{width:"5rem"}}/>
                         </div>

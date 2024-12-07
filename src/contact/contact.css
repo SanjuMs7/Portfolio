@@ -23,6 +23,7 @@
 }
 .contact-links img{
       width:80%;
+      transition: all .3s ease-out;
 }
 .contact-icon-div
 {
@@ -51,6 +52,9 @@
 .emailClass:hover
 {
       opacity: .8 ;
+}
+.contact-icon-div:hover img{
+     scale: 1.1;
 }
 /*media queries*/
 @media (max-width:376px)
