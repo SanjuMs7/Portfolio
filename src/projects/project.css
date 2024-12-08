@@ -2,6 +2,7 @@
 {
       width: 100%;
       display: flex;
+      flex-direction: column;
       justify-content:space-evenly;
       align-items: center;
       gap: 2rem;
@@ -9,10 +10,12 @@
       opacity: 0; 
       transform: translateY(40px);
       transition: all 0.3s ease-in-out;
+      border: none;
 }
 .projects{
       width: 50rem;
-      aspect-ratio: 2/1;
+      height: 28rem;
+      /* aspect-ratio: 2/1; */
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -20,6 +23,8 @@
       border-radius:2rem;
       background-image: linear-gradient(to bottom right, #1b1b1b, #131313);
       box-shadow: 0px 0px 1px 1px rgb(36, 36, 36);
+      background-size: cover;
+      border: none;
 }
 .project-image-preview-div{
       width: inherit;
@@ -29,26 +34,21 @@
       cursor: pointer;
       position: relative;
       overflow: hidden;
+      background-position: center;
+      background-size: contain;
+      border:none;
 }
 .project-image-preview-div img{
       width: inherit;
       height: inherit;
       border-radius: inherit;
+      border: none;
 }    
 .project-description
 {
       padding-block: 1rem;
       font-size: 13px;
       opacity: .8;
-}
-.project-btn
-{
-      width: 12rem;
-}
-.project-button-div
-{
-      display: flex;
-      gap:2rem;
 }
 .project-image-preview-div:hover .hidden-div{
       opacity: 1;
@@ -68,77 +68,65 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      /* line-height: 15px; */
+      color: white;
+      border: none;
 }
 .hidden-div .heading{
       font-size: 45px;
       font-weight: 600;
 }
+.project-button-div{
+      display: flex;
+      width: 100%;
+      justify-content:center;
+      gap: 2rem;
+      position: absolute;
+      bottom: 2rem;
+      padding-inline: 2rem;
+      overflow: hidden;
+}
+.project-button-div img{
+      width: 2rem;
+      background-color: white;
+      border-radius: 50%;
+      padding: .2rem;
+      opacity:.5;
+      transition: all .2s ease-in-out;
+}
+.project-button-div img:hover{
+      opacity: .7;
+}
 /* media queries */
-@media(max-width:595px) 
-{
-      .projects
-      {
-            width: 25rem;
-      }
-      .project-btn
-      {
-            width: 10rem;
-      }
-}
-@media(max-width:532px) 
-{
-      .project-btn
-      {
-            width: 9rem;
-      }
-}
-@media(max-width:502px) 
-{
-      .project-btn
-      {
-            width: 8rem;
-      }
-}
-@media(max-width:473px) 
-{
-      .project-btn
-      {
-            width: 7rem;
-      }
-}
-@media (max-width:426px)
-{
-      .project-button-div
-      {
-            display: flex;
-            flex-direction: column;
-            gap:.5rem;
-      }
-      .project-btn
-      {
-            width: 14rem;
-            height: 3rem;
-      }
-}
-@media (max-width:376px)
-{
-      .project-btn
-      {
-            width: 17rem;
-      }      
-}
-@media(max-width:325px)
-{
+@media(max-width:812px){
       .projects{
-            width: 14rem;
-            padding: 1rem;
+            width: 40rem;
+            height: 25rem;
       }
-      .project
-      {
-            flex-direction: column;
+}
+@media(max-width:652px){
+      .projects{
+            width: 30rem;
+            height: 18rem;
       }
-      .projects a button{
-            width:13rem;
+}
+@media(max-width:541px) {
+      .projects{
+            width: 25rem;
+            height: 13rem;
+            border-radius: 1rem;
+      }
+}
+@media(max-width:407px) {
+      .projects{
+            width: 20rem;
+            height: 11rem;
+            border-radius: 1rem;
+      }
+}
+@media(max-width:332px) {
+      .projects{
+            width: 18rem;
+            height: 10rem;
+            border-radius: 1rem;
       }
 }
