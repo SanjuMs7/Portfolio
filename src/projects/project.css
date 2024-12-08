@@ -108,12 +108,38 @@
             width: 30rem;
             height: 18rem;
       }
+      .hidden-div .project-description{
+            font-size: 11px;
+      }
+      .hidden-div .heading{
+            font-size: 38px;
+      }
 }
 @media(max-width:541px) {
       .projects{
             width: 25rem;
             height: 13rem;
             border-radius: 1rem;
+      }
+      .hidden-div{
+            display: flex;
+            width: inherit;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+      }
+      .hidden-div .project-description{
+            display: none;
+      }
+      .hidden-div .heading{
+            font-size: 32px;
+      }
+      .project-button-div{
+            position: absolute;
+            bottom:0px;
+      }
+      .project-button-div img{
+            width: 1.5rem;
       }
 }
 @media(max-width:407px) {
@@ -128,5 +154,8 @@
             width: 18rem;
             height: 10rem;
             border-radius: 1rem;
+      }
+      .hidden-div .heading{
+            font-size: 28px;
       }
 }
