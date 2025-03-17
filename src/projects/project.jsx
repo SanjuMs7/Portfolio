@@ -33,8 +33,8 @@ function Project({projectName,projectDescription,projectPreview,gitRepoLink,live
               {projectDescription}
             </p>
             <div className="project-button-div">
-              <a href={gitRepoLink}><img src={projectGithubRepo} alt=''/></a>
-              <a href={livePreviewLink} target='_blank'><img src={livePreviewIcon} alt="" /></a>
+              {/* <a href={gitRepoLink}><img src={projectGithubRepo} alt=''/></a>
+              <a href={livePreviewLink} target='_blank'><img src={livePreviewIcon} alt="" /></a> */}
             </div> 
         </div>
         </div>
